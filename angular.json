@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WhitePanda6": {
+    "FatBoy6": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WhitePanda6",
+            "outputPath": "dist/FatBoy6",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WhitePanda6:build"
+            "browserTarget": "FatBoy6:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WhitePanda6:build:production"
+              "browserTarget": "FatBoy6:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WhitePanda6:build"
+            "browserTarget": "FatBoy6:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "WhitePanda6-e2e": {
+    "FatBoy6-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WhitePanda6:serve"
+            "devServerTarget": "FatBoy6:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WhitePanda6:serve:production"
+              "devServerTarget": "FatBoy6:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "WhitePanda6"
+  "defaultProject": "FatBoy6"
 }
