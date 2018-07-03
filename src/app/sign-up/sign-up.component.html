@@ -1,18 +1,18 @@
-<form action="">
+<form (ngSubmit)="addUser()" #bookForm="ngForm">
 
   <div class="form-group">
     <label for="email">Email Id:</label>
-    <input type="email" class="form-control" id="email"  placeholder="Email Id">
+    <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email Id" required>
   </div>
 
   <div class="form-group">
-    <label for="pswd">Password:</label>
-    <input type="password" class="form-control" id="pswd"  placeholder="Password">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" required>
   </div>
 
   <div class="form-group">
     <label for="contact">Contact Details:</label>
-    <input type="number" class="form-control" id="contact"  placeholder="+91-">
+    <input type="number" class="form-control" [(ngModel)]="user.contact" name="contact"  placeholder="+91-" required>
   </div>
 
   <div class="form-group">
@@ -20,33 +20,33 @@
 
     <div class="form-check form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="paytm" id="paytm" value="0">
+        <input type="radio" class="form-check-input" [(ngModel)]="user.pp" name="pp" value="0">
         Paytm
       </label>
     </div>
 
     <div class="form-check form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="tez" id="tez" value="1">
+        <input type="radio" class="form-check-input" [(ngModel)]="user.pp" name="pp" value="1">
         Tez
       </label>
     </div>
 
     <div class="form-check form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="phonepe" id="phonepe" value="2">
+        <input type="radio" class="form-check-input" [(ngModel)]="user.pp" name="pp" value="2">
         PhonePe
       </label>
     </div>
 
     <div class="form-check form-check-inline">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="cash" id="cash" value="3" checked>
+        <input type="radio" class="form-check-input" [(ngModel)]="user.pp" name="pp" value="3" checked>
         Cash
       </label>
     </div>
 
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!bookForm.form.valid">Submit</button>
 </form>
