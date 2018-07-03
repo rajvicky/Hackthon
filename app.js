@@ -5,11 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var createError = require('http-errors');
 
-var matrimonyRoute = require('./routes/MatrimonyRoute');
-var businessRoute = require('./routes/BusinessRoute');
-var serviceRoute = require('./routes/ServiceRoute');
-var userRoute = require('./routes/UserRoute');
-var loginRoute = require('./routes/LoginRoute');
+var Route = require('./routes/Route');
 
 var app = express();
 
@@ -22,14 +18,10 @@ mongoose.connect('mongodb://Ritesh:Ritesh@ds223509.mlab.com:23509/whitepanda', {
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
-app.use(express.static(path.join(__dirname, 'dist/FatBoy6')));
-app.use('/', express.static(path.join(__dirname, 'dist/FatBoy6')));
+app.use(express.static(path.join(__dirname, 'dist/Hackthon')));
+app.use('/', express.static(path.join(__dirname, 'dist/Hackthon')));
 
-app.use('/matrimonyroute', matrimonyRoute);
-app.use('/businessroute', businessRoute);
-app.use('/serviceroute', serviceRoute);
-app.use('/userroute', userRoute);
-app.use('/loginroute', loginRoute);
+app.use('/route', Route);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
