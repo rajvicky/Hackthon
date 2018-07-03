@@ -1,0 +1,26 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+#header{
+    background: rgb(0,0,0);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#main{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#footer{
+    background: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
