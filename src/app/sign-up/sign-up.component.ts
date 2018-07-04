@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,8 +11,13 @@ export class SignUpComponent implements OnInit {
 
   user = { };
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClientModule, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  addUser() {
+
+
   }
 }
